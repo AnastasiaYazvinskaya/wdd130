@@ -197,7 +197,7 @@ nav a:hover {
 /* Form */
 form {
     /* Center the form on the page */
-    margin: 0 auto;
+    margin: 20px auto;
     width: 400px;
     /* Form outline */
     padding: 1em;
