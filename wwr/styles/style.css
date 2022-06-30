@@ -98,7 +98,7 @@ nav a:hover {
     margin-top: 10px;
 }
 /* Buttons */
-.book, .join {
+.book, .join, .btn {
     background-color: #84a07c;
     color: #000000;
     font-size: 18px;
@@ -106,7 +106,7 @@ nav a:hover {
     margin-top: 50px;
     border-radius: 5px;
 }
-.book:hover, .join:hover {
+.book:hover, .join:hover, .btn:hover {
     background-color: #6ea361;
     color: #000000;
 }
