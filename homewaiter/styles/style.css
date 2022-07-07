@@ -52,18 +52,21 @@ header {
     align-self: center;
 }
 /* Navigation */
-nav {
+nav div {
     display: flex;
     justify-content: space-around;
 }
-nav a {
+nav div a{
     text-align: center;  /* Centerize elements */
     color: #E3EAF2;
-    padding: 35px;
+    padding: 38px;
 }
-nav a:hover {
+nav div a:hover {
     background-color: #ABC15C;
     color: #A30049;
+}
+.closebtn, .openbtn {
+    display: none;
 }
 
 /* Footer */
@@ -195,7 +198,7 @@ footer .social img {
     grid-row-gap: 10px;
 }
 .recipe {
-    background-color: #abc15c73;
+    background-color: #abc15cd3;
     padding: 10px;
     height: 150px;
     width: 60%;
@@ -203,7 +206,7 @@ footer .social img {
     border-radius: 10px;
 }
 .recipe:hover {
-    box-shadow: 0 0 10px #8da82a;
+    box-shadow: 10px #5d6e19;
     width: 63%;
 }
 .recipe-card {
@@ -234,13 +237,68 @@ footer .social img {
         display: block;
         height: auto;
     }
-    nav, footer {
+    nav div, footer {
         flex-direction: column;
     }
     nav a {
         display: block;
         padding: 15px;
     }
+    nav div {
+        display: none;
+    }
+    .openbtn, .closebtn {
+        position: absolute;
+        right: 45px;
+        font-size: 60px;
+    }
+    .openbtn {
+        display: block;
+        margin: 25px 0;
+    }
+    .openbtn:before, .openbtn:after, .openbtn span {
+        transition: all 0.2s linear;
+        background: #E3EAF2;
+        content: "";
+        display: block;
+        height: 5px;
+        width: 40px;
+        border-radius: 3px;
+        margin: 7px 0;
+    }
+    .openbtn:hover:before, .openbtn:hover:after, .openbtn:hover span {
+        cursor: pointer;
+        background-color: #ABC15C;
+    }
+    .openNav {
+        grid-column: 1/3;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        transition: 0.5s;
+        height: 100vh;
+        width: 100vw;
+        background-color: #a30049da;
+    }
+    .openNav .overlay {
+        overflow-y: hidden;
+    }
+    .openNav .overlay-content {
+        display: block;
+        margin-top: 55px;
+    }
+    .openNav .closebtn {
+        display: block;
+        color: #E3EAF2;
+        cursor: pointer;
+    }
+    .closebtn:hover {
+        color: #ABC15C;
+    }
+    .openNav .openbtn {
+        display: none;
+    }
+    
     #hero {
         margin-top: 0;
     }

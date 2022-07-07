@@ -14,12 +14,20 @@
                 <a href="index.html" id="logo_link">
                     <img class="logo" src="images/logo.png" alt="HomeWaiter Logo">
                 </a>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="recipes.html">Recipes</a>
-                    <a href="boxes.html">Boxes</a>
-                    <!--<a href="#">Contact Us</a>-->
-                </nav>
+                <div id="myNav">
+                    <nav class="overlay">
+                        <!-- Button to close the overlay navigation -->
+                        <span class="closebtn" onclick="openNav()">&times;</span>
+                        <!-- Overlay content -->
+                        <div class="overlay-content">
+                            <a href="index.html">Home</a>
+                            <a href="recipes.html">Recipes</a>
+                            <a href="boxes.html">Boxes</a>
+                        </div>
+                    </nav>
+                    <!-- Use any element to open/show the overlay navigation menu -->
+                    <span class="openbtn" onclick="openNav()"><span></span></span>
+                </div>
             </header>
             <!-- Hero: hero image  -->
             <div id="hero">
@@ -106,5 +114,16 @@
                 </div>
             </footer>
         </div>
+        <script>
+            /* Open */
+            function openNav() {
+                document.getElementById("myNav").classList.toggle("openNav");//.style.height = "100%";
+            }
+
+            /* Close */
+            function closeNav() {
+                document.getElementById("myNav").classList.toggle("closeNav");//.style.height = "0%";
+            }
+        </script>
     </body>
 </html>
