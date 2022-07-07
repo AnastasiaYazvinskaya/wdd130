@@ -206,7 +206,7 @@ footer .social img {
     border-radius: 10px;
 }
 .recipe:hover {
-    box-shadow: 10px #5d6e19;
+    box-shadow: 0 0 10px #5d6e19;
     width: 63%;
 }
 .recipe-card {
